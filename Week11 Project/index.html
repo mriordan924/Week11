@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- adding sounds to game clicks -->
+    <audio id="clickSoundX" src="mp3/interface-124464.mp3" preload="auto"></audio>
+    <audio id="clickSoundO" src="mp3/button-124476.mp3" preload="auto"></audio>
+    <audio id="newGameSound" src="mp3/fast-simple-chop-5-6270.mp3" preload="auto"></audio>
+    <audio id="yaySound" src="mp3/pick-92276.mp3" preload="auto"></audio>
+
+
+</head>
+
+<body>
+    <div class="content">
+     <img src="images/Sugar Rush.png" style="height: 300px; width:900px;">
+    <!-- create a div that will hold the 9 squares and the button for restart, with the 9 game squares in their own container. Using buttons since there will be a click to reveal X or O. added in cell class and value to be able to utilize images in place of standard Xs and Os -->
+    <div class="game-container">
+        <!-- add header to indicate turn -->
+        <h2 id="turnIndicator">Player X's Turn</h2>
+        <div class="container">
+            <button id="0" type="button" class="cell" data-value=""></button>
+            <button id="1" type="button" class="cell" data-value="" ></button>
+            <button id="2" type="button" class="cell" data-value=""></button>
+            <button id="3" type="button" class="cell" data-value=""></button>
+            <button id="4" type="button" class="cell" data-value=""></button>
+            <button id="5" type="button" class="cell" data-value=""></button>
+            <button id="6" type="button" class="cell" data-value=""></button>
+            <button id="7" type="button" class="cell" data-value=""></button>
+            <button id="8" type="button" class="cell" data-value=""></button>
+        </div>
+            <button id="newGame">New Game</button>
+    </div>
+
+    <!-- to style winner/tie pop-up -->
+
+<div class="modal" id="messageModal">
+    <div class="modal-content">
+      <p id="messageText"></p>
+      <button id="closeModal">Yay!</button>
+    </div>
+  </div>
+</div>
+
+  
+
+
+<script src="tictac.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</body>
+</html>
+
+<!-- Using any of the tools you've worked with so far, create a game of Tic-Tac-Toe.
+Create a Tic-Tac-Toe game grid using your HTML element of choice.
+When a cell in the grid is clicked, an X or O should appear in that spot depending on whose turn it is.
+A heading should say whether it is X's or O's turn and change with each move made.
+A button should be available to clear the grid and restart the game.
+When a player has won, or the board is full and the game results in a draw, a Bootstrap alert or similar Bootstrap component should appear across the screen announcing the winner. -->
